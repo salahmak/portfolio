@@ -1,0 +1,155 @@
+{
+  "about": {
+    "name": "Salah Eddine Makdour",
+    "title": "Software Engineer & AI Specialist",
+    "bio": "I'm a 4th year software engineering student at the National Higher School of Artificial Intelligence (ENSIA) with expertise in full-stack web development, mobile development, and AI solutions. I specialize in building innovative applications and solutions that solve real-world problems using cutting-edge technologies.",
+    "image": "/profile.png",
+    "resume": "/resume.pdf",
+    "social": {
+      "github": "https://github.com/salahmak",
+      "linkedin": "https://linkedin.com/in/salah-eddine-makdour-091081235",
+      "devpost": "https://devpost.com/salahmak"
+    }
+  },
+  "skills": [
+    {
+      "category": "Programming Languages",
+      "items": ["C++ (Advanced)", "Python (Advanced)", "JavaScript/TypeScript (Advanced)", "Dart (Advanced)", "Java (Beginner)", "PHP (Beginner)"]
+    },
+    {
+      "category": "Frameworks & Libraries",
+      "items": ["React", "Next.js", "Flutter", "Express.js", "Node.js", "TensorFlow", "PyTorch"]
+    },
+    {
+      "category": "Tools & Technologies",
+      "items": ["Git", "Docker", "Linux", "PostgreSQL", "MongoDB", "REST APIs", "Computer Vision", "Machine Learning", "Electronics", "Robotics"]
+    },
+    {
+      "category": "Areas of Expertise",
+      "items": ["Full-Stack Web Development", "Cross-Platform Mobile Development", "Computer Vision", "AI & Machine Learning", "Edge Computing", "Large Language Models", "Database Design", "API Development"]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "Optimus LPE",
+      "location": "Remote",
+      "startDate": "June 2024",
+      "endDate": "September 2024",
+      "description": "Worked on advanced loss prevention engineering software solutions. Developed and optimized applications to improve security measures and reduce inventory shrinkage for retail businesses."
+    },
+    {
+      "title": "Software Engineering & AI Intern",
+      "company": "SARL Basseer Innovation & Technology",
+      "location": "Algeria",
+      "startDate": "June 2023",
+      "endDate": "September 2023",
+      "description": "Built AI and Computer Vision solutions on edge devices using Python."
+    },
+    {
+      "title": "Software Engineering & AI Intern",
+      "company": "SARL Basseer Innovation & Technology",
+      "location": "Algeria",
+      "startDate": "July 2024",
+      "endDate": "September 2024",
+      "description": "Built AI and Computer Vision solutions on edge devices using Python."
+    },
+    {
+      "title": "Co-Founder & Ex-President",
+      "company": "ENSIA Tech Community (ETC)",
+      "location": "Algeria",
+      "startDate": "2022",
+      "endDate": "2024",
+      "description": "Founded and led the technical community at ENSIA. Mentored workshops in AI, software development, and electronics."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Artificial Intelligence (4th Year)",
+      "institution": "The National Higher School of Artificial Intelligence (ENSIA)",
+      "location": "Algeria",
+      "startDate": "2020",
+      "endDate": "Present",
+      "description": "Specializing in artificial intelligence and software engineering."
+    },
+    {
+      "degree": "BAC in Mathematics",
+      "institution": "Chadli Benjdid High School, Bordj Bounaama",
+      "location": "Tissemsilt, Algeria",
+      "startDate": "2017",
+      "endDate": "2020",
+      "description": "Graduated with an average of 17.95 in Mathematics stream."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Forest Fire Detection and Monitoring System",
+      "description": "Developed an intelligent system for early detection and real-time monitoring of forest fires using computer vision and AI technologies. The solution processes video streams from strategic camera placements to identify fire patterns and smoke signatures, enabling immediate alerts to authorities. Optimized for edge deployment on NVIDIA Jetson devices, allowing autonomous operation in remote areas with limited connectivity.",
+      "technologies": ["Python", "OpenCV", "MQTT", "NVIDIA Jetson", "Object Detection", "YOLO", "Edge Computing", "Computer Vision"],
+      "image": "/projects/forest.png"
+    },
+    {
+      "title": "Face Detection and Identification System",
+      "description": "Engineered a comprehensive facial recognition system capable of detecting and identifying individuals in real-time video streams. The solution combines advanced computer vision techniques with optimized deep learning models to provide accurate identification even in challenging lighting conditions. Implemented on edge devices for privacy-preserving processing and minimal latency, making it suitable for access control and security applications.",
+      "technologies": ["Python", "OpenCV", "MQTT", "NVIDIA Jetson", "Face Detection", "Face Recognition", "Edge AI", "Deep Learning"],
+      "image": "/projects/face-recognition.png"
+    },
+    {
+      "title": "Equipment Inspections Platform",
+      "description": "Designed and implemented a comprehensive web-based platform that streamlines the equipment inspection process for industrial safety companies. The solution features digital inspection forms, automated reporting, client dashboards, and maintenance scheduling with notification systems. This platform has significantly reduced paperwork, improved inspection accuracy, and enhanced client communication for safety-critical industrial environments.",
+      "technologies": ["React", "Node.js", "PostgreSQL", "RESTful API", "Authentication", "PDF Generation", "Real-time Notifications"],
+      "image": "/projects/atex.png"
+    },
+    {
+      "title": "Notiverse App",
+      "description": "Founder and Developer of the Notiverse App. A mobile application that allows users to organize their notes seamlessly",
+      "technologies": ["Flutter", "Dart", "Mobile Development"],
+      "image": "/projects/notiverse.png",
+      "demo": "https://notiverse.app/"
+    },
+    {
+      "title": "SatisUniv",
+      "description": "A platform designed to improve school stakeholder satisfaction through better communication and feedback systems.",
+      "technologies": ["Full-Stack Web Development", "JavaScript", "TypeScript", "React", "Node.js"],
+      "image": "/projects/satisuniv.png"
+    },
+    {
+      "title": "CourseSeeker",
+      "description": "Software engineering course project focusing on backend development with TypeScript, Express.js, and PostgreSQL.",
+      "technologies": ["TypeScript", "Express.js", "PostgreSQL", "Backend Development", "API Development"],
+      "image": "/projects/course-seeker.png",
+      "github": "https://github.com/Online-directory-for-Private-Schools/backend",
+      "demo": "https://course-seeker-api-docs.vercel.app/"
+    },
+    {
+      "title": "ENSIA Hub Library Website",
+      "description": "Managed and led the development of a library website for the ENSIA Tech Community club, providing resources for students.",
+      "technologies": ["Full-Stack Development", "Next.js", "React", "Node.js"],
+      "image": "/projects/ensiahub.png",
+      "github": "https://github.com/ETC-development/ETC-Library-Website",
+      "demo": "https://ensia-hub.netlify.app/"
+    },
+    {
+      "title": "ETC Club Website",
+      "description": "Developed the official website for ENSIA Tech Community club using Next.js framework.",
+      "technologies": ["Next.js", "React", "Full-Stack Development", "TypeScript"],
+      "image": "/projects/etc.png",
+      "demo": "https://etc-club.vercel.app/"
+    },
+    {
+      "title": "COVID-19 Shopping App",
+      "description": "Top 15 Project in IEEE Quarantine Hackathon. Developed a mobile application to facilitate safe shopping during the COVID-19 pandemic.",
+      "technologies": ["Mobile Development", "Flutter", "Dart", "Hackathon"],
+      "image": "/projects/ecommerce.png",
+      "github": "https://github.com/salahmak/quick-Shopping-app-for-covid-19-pandemic"
+    }
+  ],
+  "testimonials": [
+
+  ],
+  "contact": {
+    "email": "salah-eddine.makdour@ensia.edu.dz",
+    "phone": "(+213) 562193983",
+    "address": "Sidi Abdellah, Algiers, Algeria"
+  }
+} 
