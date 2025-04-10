@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import usePortfolioData from '../../hooks/usePortfolioData';
-import ThemeToggle from '../ui/ThemeToggle';
 
 const Header = () => {
   const { about } = usePortfolioData();
