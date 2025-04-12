@@ -49,7 +49,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold text-primary">
-          {about.name.split(' ')[0]}
+          Salahmak
           <span className="text-secondary">.dev</span>
         </Link>
 
