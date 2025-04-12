@@ -1,9 +1,14 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import usePortfolioData from '../../hooks/usePortfolioData';
+import { generateCV } from '../../utils/generateCV';
 
 const Hero = () => {
-  const { about } = usePortfolioData();
+  const portfolioData = usePortfolioData();
+
+  const handleDownloadCV = () => {
+    generateCV(portfolioData);
+  };
 
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-light to-gray-100 dark:from-dark dark:to-gray-900 pt-20">
@@ -16,13 +21,13 @@ const Hero = () => {
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-4">
               <span className="block">Hi, I'm</span>
-              <span className="text-primary">{about.name.split(' ')[0]}</span>
+              <span className="text-primary">{portfolioData.about.name.split(' ')[0]}</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-medium text-gray-700 dark:text-gray-300 mb-6">
-              {about.title}
+              {portfolioData.about.title}
             </h2>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-lg mb-8">
-              {about.bio}
+              {portfolioData.about.bio}
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -31,16 +36,16 @@ const Hero = () => {
               >
                 View Projects
               </Link>
-              <Link
-                to="/#contact"
+              <button
+                onClick={handleDownloadCV}
                 className="px-8 py-3 border border-primary text-primary rounded-md font-medium hover:bg-primary/10 transition-colors"
               >
-                Contact Me
-              </Link>
+                Download Resume
+              </button>
             </div>
             <div className="flex gap-5 mt-8">
               <a
-                href={about.social.github}
+                href={portfolioData.about.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
@@ -51,7 +56,7 @@ const Hero = () => {
                 </svg>
               </a>
               <a
-                href={about.social.linkedin}
+                href={portfolioData.about.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
@@ -73,8 +78,8 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-primary/20 rounded-full filter blur-3xl opacity-70"></div>
               <img
-                src={about.image}
-                alt={about.name}
+                src={portfolioData.about.image}
+                alt={portfolioData.about.name}
                 className="rounded-full border-4 border-white dark:border-dark shadow-lg relative z-10 w-80 h-80 object-cover"
               />
             </div>

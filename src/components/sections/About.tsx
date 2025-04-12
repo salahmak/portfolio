@@ -1,9 +1,14 @@
 import { motion } from 'framer-motion';
 import usePortfolioData from '../../hooks/usePortfolioData';
 import SectionTitle from '../ui/SectionTitle';
+import { generateCV } from '../../utils/generateCV';
 
 const About = () => {
-  const { about, contact } = usePortfolioData();
+  const portfolioData = usePortfolioData();
+
+  const handleDownloadCV = () => {
+    generateCV(portfolioData);
+  };
 
   return (
     <section id="about" className="py-20 bg-light dark:bg-dark">
@@ -20,26 +25,26 @@ const About = () => {
           >
             <h3 className="text-3xl font-bold mb-4">Who am I?</h3>
             <p className="text-gray-700 dark:text-gray-300 text-lg mb-6">
-              {about.bio}
+              {portfolioData.about.bio}
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div>
                 <h4 className="text-lg font-semibold mb-2">Name</h4>
-                <p className="text-gray-700 dark:text-gray-300">{about.name}</p>
+                <p className="text-gray-700 dark:text-gray-300">{portfolioData.about.name}</p>
               </div>
               <div>
                 <h4 className="text-lg font-semibold mb-2">Email</h4>
                 <a 
-                  href={`mailto:john.doe@example.com`} 
+                  href={`mailto:${portfolioData.contact.email}`} 
                   className="text-primary hover:underline"
                 >
-                  {contact.email}
+                  {portfolioData.contact.email}
                 </a>
               </div>
               <div>
                 <h4 className="text-lg font-semibold mb-2">Location</h4>
-                <p className="text-gray-700 dark:text-gray-300">{contact.address}</p>
+                <p className="text-gray-700 dark:text-gray-300">{portfolioData.contact.address}</p>
               </div>
               <div>
                 <h4 className="text-lg font-semibold mb-2">Field</h4>
@@ -47,14 +52,12 @@ const About = () => {
               </div>
             </div>
             
-            <a 
-              href={about.resume} 
+            <button 
+              onClick={handleDownloadCV}
               className="px-8 py-3 bg-primary text-white rounded-md font-medium hover:bg-primary/90 transition-colors inline-block"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Download Resume
-            </a>
+            </button>
           </motion.div>
           
           <motion.div
@@ -68,8 +71,8 @@ const About = () => {
               <div className="absolute -inset-4 bg-primary/20 rounded-xl rotate-6"></div>
               <div className="absolute -inset-4 bg-secondary/20 rounded-xl -rotate-6"></div>
               <img
-                src={about.image}
-                alt={about.name}
+                src={portfolioData.about.image}
+                alt={portfolioData.about.name}
                 className="rounded-xl w-full max-w-md relative z-10 border-4 border-white dark:border-dark shadow-lg"
               />
             </div>
