@@ -83,6 +83,13 @@
   ],
   "projects": [
     {
+      "title": "Syllabri",
+      "description": "Founder and Fullstack Developer of the Syllabri, an AI-powered study assistant designed to transform how you learn. It helps users by summarizing and extracting key insights from educational content — making studying more efficient and focused.",
+      "technologies": ["React", "RAG", "FastAPI", "Fullstack"],
+      "image": "/projects/syllabri.png",
+      "demo": "https://syllabri.vercel.app/"
+    },
+    {
       "title": "Notiverse App",
       "description": "Founder and Developer of the Notiverse App. A mobile application that allows users to organize their notes seamlessly",
       "technologies": ["Flutter", "Dart", "Mobile Development"],
