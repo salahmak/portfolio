@@ -6,8 +6,51 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    @apply bg-light dark:bg-dark text-dark dark:text-light min-h-screen transition-colors duration-300;
+    @apply bg-bone text-ink dark:bg-ink dark:text-bone min-h-screen font-sans antialiased transition-colors duration-150;
   }
-} 
+
+  ::selection {
+    @apply bg-accent text-bone;
+  }
+}
+
+@layer components {
+  /* Blueprint grid backdrop */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(17, 17, 16, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(17, 17, 16, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .dark .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(237, 234, 228, 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(237, 234, 228, 0.07) 1px, transparent 1px);
+  }
+
+  /* Schematic mono label: [CASE-01], STATUS: AVAILABLE, ... */
+  .label-mono {
+    @apply font-mono text-xs uppercase tracking-[0.15em];
+  }
+
+  /* Bordered panel — the core brutalist surface */
+  .panel {
+    @apply border-2 border-ink bg-bone dark:border-bone dark:bg-ink;
+  }
+
+  /* Push-button: hard shadow that "presses" on click */
+  .btn-push {
+    @apply inline-flex items-center justify-center gap-2 border-2 border-ink dark:border-bone px-6 py-3 font-mono text-sm font-semibold uppercase tracking-widest transition-all duration-150 shadow-hard dark:shadow-hard-bone hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-hard-lg dark:hover:shadow-hard-bone-lg active:translate-x-1 active:translate-y-1 active:shadow-none dark:active:shadow-none;
+  }
+
+  .btn-push-primary {
+    @apply btn-push bg-accent text-bone;
+  }
+
+  .btn-push-ghost {
+    @apply btn-push bg-bone text-ink dark:bg-ink dark:text-bone;
+  }
+}

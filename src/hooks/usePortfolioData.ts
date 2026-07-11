@@ -2,6 +2,24 @@ import { useState, useEffect } from 'react';
 import portfolioData from '../data/portfolio.json';
 
 export interface PortfolioData {
+  hero: {
+    eyebrow: string;
+    headlineStart: string;
+    headlineHighlight: string;
+    subline: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+  };
+  availability: {
+    status: string;
+    location: string;
+    response: string;
+    focus: string;
+  };
+  stats: Array<{
+    value: string;
+    label: string;
+  }>;
   about: {
     name: string;
     title: string;
@@ -11,6 +29,7 @@ export interface PortfolioData {
     social: {
       github: string;
       linkedin: string;
+      devpost?: string;
     };
   };
   skills: Array<{
@@ -38,8 +57,13 @@ export interface PortfolioData {
     description: string;
     technologies: string[];
     image: string;
-    github: string;
-    demo: string;
+    featured?: boolean;
+    role?: string;
+    year?: string;
+    outcome?: string;
+    metrics?: string[];
+    github?: string;
+    demo?: string;
   }>;
   testimonials: Array<{
     name: string;
@@ -64,4 +88,4 @@ export default function usePortfolioData(): PortfolioData {
   }, []);
 
   return data;
-} 
+}

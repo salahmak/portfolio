@@ -1,103 +1,53 @@
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import usePortfolioData from '../../hooks/usePortfolioData';
 import SectionTitle from '../ui/SectionTitle';
 
 const Testimonials = () => {
   const { testimonials } = usePortfolioData();
-  const [activeIndex, setActiveIndex] = useState(0);
 
-  useEffect(() => {
-    if (testimonials.length === 0) return;
-    
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 7000);
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
-
-  // Don't render the section if testimonials array is empty
   if (!testimonials.length) {
     return null;
   }
 
   return (
-    <section id="testimonials" className="py-20 bg-light dark:bg-dark">
-      <div className="container mx-auto px-4">
-        <SectionTitle title="Testimonials" subtitle="What people say about me" center />
-        
-        <div className="relative mt-12 max-w-4xl mx-auto">
+    <section id="testimonials" className="border-t-2 border-ink py-20 dark:border-bone md:py-28">
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
+        <SectionTitle index="05" label="Proof" title="What clients say" />
+
+        <div className="grid gap-6 md:grid-cols-2">
           {testimonials.map((testimonial, index) => (
-            <motion.div
+            <motion.blockquote
               key={testimonial.name}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: index === activeIndex ? 1 : 0 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 md:p-10 text-center"
-              style={{ display: index === activeIndex ? 'block' : 'none' }}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: (index % 2) * 0.08 }}
+              viewport={{ once: true }}
+              className="panel p-6 shadow-hard dark:shadow-hard-bone"
             >
-              <div className="w-24 h-24 mx-auto mb-6 overflow-hidden rounded-full border-4 border-primary">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              <blockquote className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 italic mb-6">
-                "{testimonial.text}"
-              </blockquote>
-              
-              <div className="font-medium">
-                <div className="text-xl font-bold text-dark dark:text-light mb-1">{testimonial.name}</div>
-                <div className="text-primary">
-                  {testimonial.position}, {testimonial.company}
+              <p className="font-display text-6xl leading-none text-accent" aria-hidden="true">"</p>
+              <p className="mt-2 leading-relaxed text-ink/80 dark:text-bone/80">{testimonial.text}</p>
+              <footer className="mt-6 flex items-center gap-4 border-t-2 border-ink/10 pt-4 dark:border-bone/10">
+                {testimonial.image && (
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    loading="lazy"
+                    className="h-12 w-12 border-2 border-ink object-cover dark:border-bone"
+                  />
+                )}
+                <div>
+                  <p className="font-display font-bold uppercase">{testimonial.name}</p>
+                  <p className="label-mono mt-1 text-stamp">
+                    {testimonial.position} · {testimonial.company}
+                  </p>
                 </div>
-              </div>
-            </motion.div>
+              </footer>
+            </motion.blockquote>
           ))}
-          
-          <div className="flex justify-center mt-8 space-x-2">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveIndex(index)}
-                className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                  index === activeIndex ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-600'
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
-            ))}
-          </div>
-          
-          {testimonials.length > 1 && (
-            <>
-              <button
-                className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-12 lg:-translate-x-16 bg-white dark:bg-gray-800 rounded-full p-3 shadow-md text-primary hover:bg-primary hover:text-white transition-colors"
-                onClick={() =>
-                  setActiveIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)
-                }
-                aria-label="Previous testimonial"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button
-                className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-12 lg:translate-x-16 bg-white dark:bg-gray-800 rounded-full p-3 shadow-md text-primary hover:bg-primary hover:text-white transition-colors"
-                onClick={() => setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length)}
-                aria-label="Next testimonial"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </>
-          )}
         </div>
       </div>
     </section>
   );
 };
 
-export default Testimonials; 
+export default Testimonials;

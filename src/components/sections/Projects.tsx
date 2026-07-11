@@ -3,109 +3,167 @@ import usePortfolioData from '../../hooks/usePortfolioData';
 import SectionTitle from '../ui/SectionTitle';
 
 const Projects = () => {
-  const { projects } = usePortfolioData();
+  const { projects, contact } = usePortfolioData();
 
-  // Don't render the section if projects array is empty
   if (!projects.length) {
     return null;
   }
 
+  const featured = projects.filter((p) => p.featured);
+  const archive = projects.filter((p) => !p.featured);
+
   return (
-    <section id="projects" className="py-20 bg-light dark:bg-dark">
-      <div className="container mx-auto px-4">
-        <SectionTitle title="My Projects" subtitle="What I've been working on" center />
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-12">
-          {projects.map((project, index) => (
-            <motion.div
+    <section id="work" className="border-t-2 border-ink py-20 dark:border-bone md:py-28">
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
+        <SectionTitle index="01" label="Work" title="Selected case studies" />
+
+        <div className="space-y-16">
+          {featured.map((project, index) => (
+            <motion.article
               key={project.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden group hover:shadow-xl transition-all"
+              transition={{ duration: 0.35 }}
+              viewport={{ once: true, margin: '-80px' }}
+              className="grid items-stretch gap-8 md:grid-cols-2"
             >
-              <div className="relative h-64 overflow-hidden">
+              {/* Image panel — alternate sides on desktop */}
+              <div className={`panel overflow-hidden shadow-hard dark:shadow-hard-bone ${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                <div className="flex items-center justify-between border-b-2 border-ink px-4 py-2 dark:border-bone">
+                  <span className="label-mono">[CASE-{String(index + 1).padStart(2, '0')}]</span>
+                  <span className="label-mono text-stamp">{project.year}</span>
+                </div>
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  className="h-64 w-full object-cover object-top md:h-[calc(100%-2.5rem)]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
-                  {/* <div className="flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 3).map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2 py-1 bg-primary/80 text-white text-xs rounded"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.technologies.length > 3 && (
-                      <span className="px-2 py-1 bg-primary/80 text-white text-xs rounded">
-                        +{project.technologies.length - 3} more
-                      </span>
-                    )}
-                  </div> */}
-                </div>
               </div>
-              
-              <div className="p-6">
-                <p className="text-gray-700 dark:text-gray-300 mb-6">
+
+              {/* Content */}
+              <div className={`flex flex-col justify-center ${index % 2 === 1 ? 'md:order-1' : ''}`}>
+                <p className="label-mono text-stamp">{project.role}</p>
+                <h3 className="font-display mt-3 text-2xl font-bold uppercase tracking-tight md:text-3xl">
+                  {project.title}
+                </h3>
+                {project.outcome && (
+                  <p className="mt-3 font-mono text-lg font-semibold text-accent">
+                    → {project.outcome}
+                  </p>
+                )}
+                <p className="mt-4 leading-relaxed text-ink/70 dark:text-bone/70">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
+
+                {project.metrics && (
+                  <ul className="mt-5 space-y-2">
+                    {project.metrics.map((metric) => (
+                      <li key={metric} className="flex items-start gap-3 font-mono text-sm">
+                        <span className="mt-1 inline-block h-2 w-2 shrink-0 bg-accent" aria-hidden="true"></span>
+                        {metric}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                <div className="mt-5 flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-xs rounded"
-                    >
+                    <span key={tech} className="label-mono border-2 border-ink/30 px-2 py-1 text-ink/70 dark:border-bone/30 dark:text-bone/70">
                       {tech}
                     </span>
                   ))}
                 </div>
-                
-                <div className="flex justify-between items-center">
-                  <div>
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary hover:text-primary/80 flex items-center transition-colors"
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
-                        GitHub
-                      </a>
-                    )}
-                  </div>
-                  
-                  <div>
+
+                {(project.demo || project.github) && (
+                  <div className="mt-6 flex gap-4">
                     {project.demo && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-4 py-2 bg-primary text-white rounded hover:bg-primary/90 transition-colors flex items-center"
-                      >
-                        Live Demo
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn-push-ghost !px-4 !py-2 text-xs">
+                        Live demo ↗
+                      </a>
+                    )}
+                    {project.github && (
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn-push-ghost !px-4 !py-2 text-xs">
+                        Source ↗
                       </a>
                     )}
                   </div>
-                </div>
+                )}
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
+
+        {/* Mid-page conversion nudge */}
+        <div className="panel mt-16 flex flex-col items-start justify-between gap-6 p-6 shadow-hard dark:shadow-hard-bone md:flex-row md:items-center md:p-8">
+          <p className="font-display text-xl font-bold uppercase md:text-2xl">
+            Have a similar problem to solve?
+          </p>
+          <a href={`mailto:${contact.email}`} className="btn-push-primary shrink-0">
+            Let's talk →
+          </a>
+        </div>
+
+        {/* Archive */}
+        {archive.length > 0 && (
+          <div className="mt-20">
+            <div className="label-mono mb-8 flex items-center gap-3 text-stamp">
+              <span className="inline-block h-2 w-2 bg-accent" aria-hidden="true"></span>
+              <span>[ More work / Archive ]</span>
+              <span className="hidden sm:block flex-1 border-t-2 border-ink/20 dark:border-bone/20"></span>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {archive.map((project, index) => (
+                <motion.article
+                  key={project.title}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: (index % 3) * 0.05 }}
+                  viewport={{ once: true }}
+                  className="panel flex flex-col p-5 transition-all duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-hard dark:hover:shadow-hard-bone"
+                >
+                  <div className="label-mono flex justify-between text-stamp">
+                    <span>{project.role}</span>
+                    <span>{project.year}</span>
+                  </div>
+                  <h4 className="font-display mt-3 text-lg font-bold uppercase leading-tight">
+                    {project.title}
+                  </h4>
+                  {project.outcome && (
+                    <p className="mt-2 font-mono text-xs font-semibold text-accent">→ {project.outcome}</p>
+                  )}
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-ink/70 dark:text-bone/70">
+                    {project.description}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.technologies.slice(0, 3).map((tech) => (
+                      <span key={tech} className="label-mono border border-ink/30 px-1.5 py-0.5 !text-[10px] text-ink/60 dark:border-bone/30 dark:text-bone/60">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  {(project.demo || project.github) && (
+                    <div className="label-mono mt-4 flex gap-4 border-t-2 border-ink/10 pt-3 dark:border-bone/10">
+                      {project.demo && (
+                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent">
+                          Demo ↗
+                        </a>
+                      )}
+                      {project.github && (
+                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent">
+                          Source ↗
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
 };
 
-export default Projects; 
+export default Projects;

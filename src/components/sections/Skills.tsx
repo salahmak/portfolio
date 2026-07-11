@@ -5,39 +5,41 @@ import SectionTitle from '../ui/SectionTitle';
 const Skills = () => {
   const { skills } = usePortfolioData();
 
-  // Don't render the section if skills array is empty
   if (!skills.length) {
     return null;
   }
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto px-4">
-        <SectionTitle title="My Skills" subtitle="What I can do" center />
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-12">
-          {skills.map((skillCategory, index) => (
+    <section id="skills" className="border-t-2 border-ink py-20 dark:border-bone md:py-28">
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
+        <SectionTitle index="02" label="Capabilities" title="What I work with" />
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {skills.map((group, index) => (
             <motion.div
-              key={skillCategory.category}
-              initial={{ opacity: 0, y: 20 }}
+              key={group.category}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.3, delay: (index % 2) * 0.08 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+              className="panel shadow-hard-sm dark:shadow-hard-bone-sm"
             >
-              <h3 className="text-2xl font-bold mb-4 text-center">
-                {skillCategory.category}
-              </h3>
-              <div className="flex flex-wrap gap-3 justify-center">
-                {skillCategory.items.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-800 dark:text-gray-200 text-sm font-medium hover:bg-primary/20 transition-colors"
-                  >
-                    {skill}
-                  </span>
-                ))}
+              <div className="flex items-center justify-between border-b-2 border-ink px-4 py-3 dark:border-bone">
+                <h3 className="label-mono font-semibold">
+                  [MOD-{String(index + 1).padStart(2, '0')}] {group.category}
+                </h3>
+                <span className="label-mono text-stamp">×{group.items.length}</span>
               </div>
+              <ul className="flex flex-wrap gap-2 p-4">
+                {group.items.map((item) => (
+                  <li
+                    key={item}
+                    className="label-mono border-2 border-ink/30 px-2.5 py-1.5 transition-colors duration-150 hover:border-accent hover:bg-accent hover:text-bone dark:border-bone/30"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>
@@ -46,4 +48,4 @@ const Skills = () => {
   );
 };
 
-export default Skills; 
+export default Skills;
