@@ -57,6 +57,7 @@ export interface PortfolioData {
     description: string;
     technologies: string[];
     image: string;
+    category?: 'CLIENT' | 'PRODUCT' | 'ACADEMIC';
     featured?: boolean;
     role?: string;
     year?: string;
@@ -64,6 +65,7 @@ export interface PortfolioData {
     metrics?: string[];
     github?: string;
     demo?: string;
+    dataset?: string;
   }>;
   testimonials: Array<{
     name: string;

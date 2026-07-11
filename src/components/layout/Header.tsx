@@ -39,7 +39,7 @@ const Header = () => {
     <header className="fixed top-0 z-50 w-full border-b-2 border-ink bg-bone dark:border-bone dark:bg-ink">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
         <Link to="/" className="font-mono text-lg font-bold tracking-tight">
-          SALAH<span className="text-accent">.DEV</span>
+          SALAHMAK<span className="text-accent">.DEV</span>
         </Link>
 
         {/* Desktop nav */}

@@ -136,6 +136,7 @@
   "projects": [
     {
       "title": "Syllabri — AI Learning Platform",
+      "category": "PRODUCT",
       "featured": true,
       "role": "Founder & Software Engineer",
       "year": "2025",
@@ -148,6 +149,7 @@
     },
     {
       "title": "AI-Based Driver Assignment Optimization",
+      "category": "ACADEMIC",
       "featured": true,
       "role": "ML Engineer",
       "year": "2023",
@@ -159,6 +161,7 @@
     },
     {
       "title": "Forest Fire Detection System",
+      "category": "CLIENT",
       "featured": true,
       "role": "Edge AI Engineer",
       "year": "2023",
@@ -170,6 +173,7 @@
     },
     {
       "title": "ATEX Equipment Inspections Platform",
+      "category": "CLIENT",
       "featured": true,
       "role": "Software Engineer (Freelance · Optimus LPE)",
       "year": "2024",
@@ -181,6 +185,7 @@
     },
     {
       "title": "Notiverse App",
+      "category": "PRODUCT",
       "featured": true,
       "role": "Founder & Software Engineer",
       "year": "2024",
@@ -192,16 +197,29 @@
       "demo": "https://www.notiverse.app/"
     },
     {
+      "title": "LLM-Based Clinical Referral Triage Automation",
+      "category": "ACADEMIC",
+      "role": "AI Intern — UDST",
+      "year": "2026",
+      "outcome": "73% ESI acuity accuracy · under-triage cut 5–12pp",
+      "description": "An end-to-end triage pipeline that classifies emergency-department encounters into three ESI acuity levels from MIMIC-IV-ED clinical notes and vitals, behind an 11-step preprocessing stage (vitals parsing, outlier handling, clinical-threshold flagging). Benchmarked 4 open-weight LLMs (dense & MoE, 24–35B, quantized to fit L4 VRAM) across 6 prompting strategies — zero/few-shot, chain-of-thought, role-based and structured output — served locally via vLLM with concurrent inference over ~7,000 predictions. Best result (Gemma-3 + few-shot) reached 73% accuracy with zero parse errors, and a safety-focused evaluation of under-triage drove a 5–12pp reduction via calibration prompting and curated, class-balanced few-shot exemplars.",
+      "technologies": ["Python", "vLLM", "PyTorch", "LLMs", "Prompt Engineering"],
+      "image": "/projects/triage.png"
+    },
+    {
       "title": "ADAS Traffic-Sign Spoof Verification",
+      "category": "ACADEMIC",
       "role": "AI Researcher — Final-Year Project",
       "year": "2026",
       "outcome": "IEEE ITS manuscript · 0.71 mean AUROC",
-      "description": "A modular, multi-sensor framework that flags spoofed and contextually implausible traffic signs in ADAS perception, fusing contextual, physical (camera–LiDAR) and pixel-level branches through a reliability-aware late-fusion layer. Built the contextual branch (104 association-rule-mining rules + calibrated logistic regression on BDD100K) and released a public BDD100K annotation extension of 16,515 VLM-labeled sign crops.",
+      "description": "A modular, multi-sensor framework that flags spoofed and contextually implausible traffic signs in ADAS perception, fusing contextual, physical (camera–LiDAR) and pixel-level branches through a reliability-aware late-fusion layer. Built the contextual branch (104 association-rule-mining rules + calibrated logistic regression on BDD100K) and released a public, human-verified BDD100K annotation extension of 16,515 VLM-labeled sign crops on IEEE DataPort.",
       "technologies": ["PyTorch", "Computer Vision", "Sensor Fusion", "LiDAR", "Association Rule Mining"],
-      "image": "/projects/adas.png"
+      "image": "/projects/adas.png",
+      "dataset": "https://ieee-dataport.org/documents/bdd100k-mutcd-fine-grained-human-verified-traffic-sign-type-annotations-bdd100k-dataset"
     },
     {
       "title": "Face Detection & Identification System",
+      "category": "CLIENT",
       "role": "Edge AI Engineer",
       "year": "2024",
       "description": "Real-time face identification on NVIDIA Jetson for access control and security. Evaluated SSD, MTCNN, SCRFD and YOLO detectors, used ArcFace for accurate feature embedding and DeepSORT for robust tracking, with MQTT for efficient backend communication.",
@@ -210,6 +228,7 @@
     },
     {
       "title": "CourseSeeker",
+      "category": "ACADEMIC",
       "role": "Backend Developer",
       "year": "2023",
       "description": "Backend for an online directory of private schools — TypeScript, Express.js and PostgreSQL, with fully documented REST APIs.",
@@ -220,6 +239,7 @@
     },
     {
       "title": "SatisUniv",
+      "category": "ACADEMIC",
       "role": "Full-Stack Developer",
       "year": "2023",
       "description": "A platform designed to improve school-stakeholder satisfaction through better communication and feedback systems.",
@@ -228,6 +248,7 @@
     },
     {
       "title": "ENSIA Hub Library Website",
+      "category": "ACADEMIC",
       "role": "Lead Developer",
       "year": "2022",
       "description": "Led development of a library website for the ENSIA Tech Community, providing learning resources for students.",
@@ -238,6 +259,7 @@
     },
     {
       "title": "ETC Club Website",
+      "category": "ACADEMIC",
       "role": "Full-Stack Developer",
       "year": "2022",
       "description": "Official website for the ENSIA Tech Community club, built with Next.js and TypeScript.",
@@ -247,6 +269,7 @@
     },
     {
       "title": "COVID-19 Shopping App",
+      "category": "ACADEMIC",
       "role": "Mobile Developer",
       "year": "2020",
       "outcome": "Top 15 in IEEE Quarantine Hackathon",

@@ -43,7 +43,10 @@ const Projects = () => {
 
               {/* Content */}
               <div className={`flex flex-col justify-center ${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                <p className="label-mono text-meta">{project.role}</p>
+                <div className="flex items-center gap-3">
+                  {project.category && <span className="category-tag">{project.category}</span>}
+                  <p className="label-mono text-meta">{project.role}</p>
+                </div>
                 <h3 className="font-display mt-3 text-2xl font-bold uppercase tracking-tight md:text-3xl">
                   {project.title}
                 </h3>
@@ -75,8 +78,8 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {(project.demo || project.github) && (
-                  <div className="mt-6 flex gap-4">
+                {(project.demo || project.github || project.dataset) && (
+                  <div className="mt-6 flex flex-wrap gap-4">
                     {project.demo && (
                       <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn-push-ghost !px-4 !py-2 text-xs">
                         Live demo ↗
@@ -85,6 +88,11 @@ const Projects = () => {
                     {project.github && (
                       <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn-push-ghost !px-4 !py-2 text-xs">
                         Source ↗
+                      </a>
+                    )}
+                    {project.dataset && (
+                      <a href={project.dataset} target="_blank" rel="noopener noreferrer" className="btn-push-ghost !px-4 !py-2 text-xs">
+                        Dataset ↗
                       </a>
                     )}
                   </div>
@@ -124,13 +132,14 @@ const Projects = () => {
                   key={project.title}
                   className="panel flex flex-col p-5 transition-colors duration-150 hover:border-accent dark:hover:border-accent"
                 >
-                  <div className="label-mono flex justify-between text-meta">
-                    <span>{project.role}</span>
-                    <span>{project.year}</span>
+                  <div className="flex items-center justify-between gap-2">
+                    {project.category && <span className="category-tag">{project.category}</span>}
+                    <span className="label-mono text-meta">{project.year}</span>
                   </div>
                   <h4 className="font-display mt-3 text-lg font-bold uppercase leading-tight">
                     {project.title}
                   </h4>
+                  <p className="label-mono mt-1 text-meta">{project.role}</p>
                   {project.outcome && (
                     <p className="mt-2 font-mono text-xs font-semibold text-accent">→ {project.outcome}</p>
                   )}
@@ -140,8 +149,8 @@ const Projects = () => {
                   <p className="label-mono mt-4 text-meta">
                     {project.technologies.slice(0, 3).join(' · ')}
                   </p>
-                  {(project.demo || project.github) && (
-                    <div className="label-mono mt-4 flex gap-4 border-t-2 border-ink/10 pt-3 dark:border-bone/10">
+                  {(project.demo || project.github || project.dataset) && (
+                    <div className="label-mono mt-4 flex flex-wrap gap-4 border-t-2 border-ink/10 pt-3 dark:border-bone/10">
                       {project.demo && (
                         <a href={project.demo} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent">
                           Demo ↗
@@ -150,6 +159,11 @@ const Projects = () => {
                       {project.github && (
                         <a href={project.github} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent">
                           Source ↗
+                        </a>
+                      )}
+                      {project.dataset && (
+                        <a href={project.dataset} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent">
+                          Dataset ↗
                         </a>
                       )}
                     </div>

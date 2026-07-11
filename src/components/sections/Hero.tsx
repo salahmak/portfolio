@@ -1,16 +1,11 @@
 import { motion } from 'framer-motion';
 import usePortfolioData from '../../hooks/usePortfolioData';
-import { generateCV } from '../../utils/generateCV';
 
 const CORE_STACK = ['Python', 'TypeScript', 'React', 'Next.js', 'Flutter', 'TensorFlow', 'PyTorch', 'Docker'];
 
 const Hero = () => {
   const portfolioData = usePortfolioData();
-  const { hero, availability, contact } = portfolioData;
-
-  const handleDownloadCV = () => {
-    generateCV(portfolioData);
-  };
+  const { hero, availability, contact, about } = portfolioData;
 
   return (
     <section className="bg-grid relative flex min-h-screen flex-col justify-between pt-16">
@@ -38,9 +33,9 @@ const Hero = () => {
             <a href={`mailto:${contact.email}`} className="btn-push-primary">
               {hero.ctaPrimary} →
             </a>
-            <button onClick={handleDownloadCV} className="btn-push-ghost">
+            <a href={about.resume} download target="_blank" rel="noopener noreferrer" className="btn-push-ghost">
               {hero.ctaSecondary}
-            </button>
+            </a>
           </div>
         </motion.div>
 
