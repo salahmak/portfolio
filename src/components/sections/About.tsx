@@ -17,15 +17,8 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35 }}
             viewport={{ once: true }}
-            className="panel mx-auto w-full max-w-xs shadow-hard-lg dark:shadow-hard-bone-lg md:mx-0"
+            className="panel mx-auto w-full max-w-xs md:mx-0"
           >
-            <div className="flex items-center justify-between border-b-2 border-ink px-4 py-2 dark:border-bone">
-              <span className="label-mono">[Operator]</span>
-              <span className="label-mono flex items-center gap-2 text-stamp">
-                <span className="h-2 w-2 animate-blink bg-accent" aria-hidden="true"></span>
-                Online
-              </span>
-            </div>
             <img
               src={about.image}
               alt={about.name}
@@ -34,7 +27,7 @@ const About = () => {
             />
             <div className="border-t-2 border-ink px-4 py-3 dark:border-bone">
               <p className="font-display font-bold uppercase">{about.name}</p>
-              <p className="label-mono mt-1 text-stamp">{about.title}</p>
+              <p className="label-mono mt-1 text-meta">{about.title}</p>
             </div>
           </motion.div>
 
@@ -48,20 +41,20 @@ const About = () => {
             <p className="text-lg leading-relaxed text-ink/80 dark:text-bone/80 md:text-xl">
               {about.bio}
             </p>
-            <p className="mt-4 font-mono text-sm text-stamp">
+            <p className="mt-4 font-mono text-sm text-meta">
               {availability.status} · {availability.location}
             </p>
 
-            <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            <div className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2">
               {stats.map((stat) => (
-                <div key={stat.label} className="panel p-5 shadow-hard-sm dark:shadow-hard-bone-sm">
+                <div key={stat.label} className="border-t-2 border-ink pt-4 dark:border-bone">
                   <p className="font-display text-4xl font-bold text-accent">{stat.value}</p>
-                  <p className="label-mono mt-2 leading-relaxed text-stamp">{stat.label}</p>
+                  <p className="label-mono mt-2 leading-relaxed text-meta">{stat.label}</p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-wrap gap-4">
               <a href={about.social.github} target="_blank" rel="noopener noreferrer" className="btn-push-ghost !px-4 !py-2 text-xs">
                 GitHub ↗
               </a>

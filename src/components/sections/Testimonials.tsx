@@ -22,7 +22,7 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: (index % 2) * 0.08 }}
               viewport={{ once: true }}
-              className="panel p-6 shadow-hard dark:shadow-hard-bone"
+              className="panel p-6"
             >
               <p className="font-display text-6xl leading-none text-accent" aria-hidden="true">"</p>
               <p className="mt-2 leading-relaxed text-ink/80 dark:text-bone/80">{testimonial.text}</p>
@@ -37,7 +37,7 @@ const Testimonials = () => {
                 )}
                 <div>
                   <p className="font-display font-bold uppercase">{testimonial.name}</p>
-                  <p className="label-mono mt-1 text-stamp">
+                  <p className="label-mono mt-1 text-meta">
                     {testimonial.position} · {testimonial.company}
                   </p>
                 </div>

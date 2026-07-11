@@ -31,7 +31,7 @@ const Projects = () => {
               <div className={`panel overflow-hidden shadow-hard dark:shadow-hard-bone ${index % 2 === 1 ? 'md:order-2' : ''}`}>
                 <div className="flex items-center justify-between border-b-2 border-ink px-4 py-2 dark:border-bone">
                   <span className="label-mono">[CASE-{String(index + 1).padStart(2, '0')}]</span>
-                  <span className="label-mono text-stamp">{project.year}</span>
+                  <span className="label-mono text-meta">{project.year}</span>
                 </div>
                 <img
                   src={project.image}
@@ -43,7 +43,7 @@ const Projects = () => {
 
               {/* Content */}
               <div className={`flex flex-col justify-center ${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                <p className="label-mono text-stamp">{project.role}</p>
+                <p className="label-mono text-meta">{project.role}</p>
                 <h3 className="font-display mt-3 text-2xl font-bold uppercase tracking-tight md:text-3xl">
                   {project.title}
                 </h3>
@@ -69,7 +69,7 @@ const Projects = () => {
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <span key={tech} className="label-mono border-2 border-ink/30 px-2 py-1 text-ink/70 dark:border-bone/30 dark:text-bone/70">
+                    <span key={tech} className="label-mono border border-ink/30 px-2 py-1 text-ink/70 dark:border-bone/30 dark:text-bone/70">
                       {tech}
                     </span>
                   ))}
@@ -107,22 +107,24 @@ const Projects = () => {
         {/* Archive */}
         {archive.length > 0 && (
           <div className="mt-20">
-            <div className="label-mono mb-8 flex items-center gap-3 text-stamp">
+            <div className="label-mono mb-8 flex items-center gap-3 text-meta">
               <span className="inline-block h-2 w-2 bg-accent" aria-hidden="true"></span>
               <span>[ More work / Archive ]</span>
               <span className="hidden sm:block flex-1 border-t-2 border-ink/20 dark:border-bone/20"></span>
             </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {archive.map((project, index) => (
-                <motion.article
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35 }}
+              viewport={{ once: true }}
+              className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            >
+              {archive.map((project) => (
+                <article
                   key={project.title}
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: (index % 3) * 0.05 }}
-                  viewport={{ once: true }}
-                  className="panel flex flex-col p-5 transition-all duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-hard dark:hover:shadow-hard-bone"
+                  className="panel flex flex-col p-5 transition-colors duration-150 hover:border-accent dark:hover:border-accent"
                 >
-                  <div className="label-mono flex justify-between text-stamp">
+                  <div className="label-mono flex justify-between text-meta">
                     <span>{project.role}</span>
                     <span>{project.year}</span>
                   </div>
@@ -135,13 +137,9 @@ const Projects = () => {
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-ink/70 dark:text-bone/70">
                     {project.description}
                   </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 3).map((tech) => (
-                      <span key={tech} className="label-mono border border-ink/30 px-1.5 py-0.5 !text-[10px] text-ink/60 dark:border-bone/30 dark:text-bone/60">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="label-mono mt-4 text-meta">
+                    {project.technologies.slice(0, 3).join(' · ')}
+                  </p>
                   {(project.demo || project.github) && (
                     <div className="label-mono mt-4 flex gap-4 border-t-2 border-ink/10 pt-3 dark:border-bone/10">
                       {project.demo && (
@@ -156,9 +154,9 @@ const Projects = () => {
                       )}
                     </div>
                   )}
-                </motion.article>
+                </article>
               ))}
-            </div>
+            </motion.div>
           </div>
         )}
       </div>

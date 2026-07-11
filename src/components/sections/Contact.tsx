@@ -6,7 +6,7 @@ const Contact = () => {
   const { contact, availability, about } = usePortfolioData();
 
   return (
-    <section id="contact" className="bg-grid border-t-2 border-ink py-20 dark:border-bone md:py-28">
+    <section id="contact" className="border-t-2 border-ink py-20 dark:border-bone md:py-28">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <SectionTitle index="06" label="Contact" title="Have a project in mind?" />
 
@@ -29,8 +29,8 @@ const Contact = () => {
                 <a href={`mailto:${contact.email}`} className="btn-push-primary">
                   {contact.email}
                 </a>
-                <span className="label-mono flex items-center gap-2 text-stamp">
-                  <span className="h-2 w-2 animate-blink bg-accent" aria-hidden="true"></span>
+                <span className="label-mono flex items-center gap-2 text-meta">
+                  <span className="h-2 w-2 bg-accent" aria-hidden="true"></span>
                   {availability.response}
                 </span>
               </div>
@@ -48,15 +48,15 @@ const Contact = () => {
             {/* Contact spec panel */}
             <div className="border-t-2 border-ink dark:border-bone md:border-l-2 md:border-t-0">
               <div className="border-b-2 border-ink p-5 dark:border-bone">
-                <p className="label-mono text-stamp">Status</p>
+                <p className="label-mono text-meta">Status</p>
                 <p className="mt-2 font-mono text-sm font-semibold uppercase">{availability.status}</p>
               </div>
               <div className="border-b-2 border-ink p-5 dark:border-bone">
-                <p className="label-mono text-stamp">Phone</p>
+                <p className="label-mono text-meta">Phone</p>
                 <p className="mt-2 font-mono text-sm font-semibold">{contact.phone}</p>
               </div>
               <div className="p-5">
-                <p className="label-mono text-stamp">Based in</p>
+                <p className="label-mono text-meta">Based in</p>
                 <p className="mt-2 font-mono text-sm font-semibold uppercase">{contact.address}</p>
               </div>
             </div>

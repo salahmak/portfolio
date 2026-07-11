@@ -51,11 +51,11 @@ const Header = () => {
               onClick={(e) => handleNavClick(e, item.id)}
               className="label-mono transition-colors hover:text-accent"
             >
-              [{item.label}]
+              {item.label}
             </Link>
           ))}
-          <span className="label-mono hidden items-center gap-2 text-stamp lg:flex">
-            <span className="h-2 w-2 animate-blink bg-accent" aria-hidden="true"></span>
+          <span className="label-mono hidden items-center gap-2 text-meta lg:flex">
+            <span className="h-2 w-2 bg-accent" aria-hidden="true"></span>
             {availability.status}
           </span>
           <a href={`mailto:${contact.email}`} className="btn-push-primary !px-4 !py-2 text-xs">
@@ -96,7 +96,7 @@ const Header = () => {
                 onClick={(e) => handleNavClick(e, item.id)}
                 className="label-mono border-b-2 border-ink/10 py-4 transition-colors hover:text-accent dark:border-bone/10"
               >
-                [{item.label}]
+                {item.label}
               </Link>
             ))}
             <a href={`mailto:${contact.email}`} className="btn-push-primary mt-4 text-xs">

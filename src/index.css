@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Klein blue on bone; lifted for contrast on ink */
+    --accent: #2438e8;
+  }
+
+  .dark {
+    --accent: #6472ff;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -14,10 +23,33 @@
   ::selection {
     @apply bg-accent text-bone;
   }
+
+  .dark ::selection {
+    @apply text-ink;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
 
 @layer components {
-  /* Blueprint grid backdrop */
+  /* Blueprint grid backdrop — hero only */
   .bg-grid {
     background-image:
       linear-gradient(to right, rgba(17, 17, 16, 0.06) 1px, transparent 1px),
@@ -36,6 +68,15 @@
     @apply font-mono text-xs uppercase tracking-[0.15em];
   }
 
+  /* Metadata gray — meets AA contrast on both themes */
+  .text-meta {
+    color: #66635e;
+  }
+
+  .dark .text-meta {
+    color: #9a968f;
+  }
+
   /* Bordered panel — the core brutalist surface */
   .panel {
     @apply border-2 border-ink bg-bone dark:border-bone dark:bg-ink;
@@ -47,7 +88,7 @@
   }
 
   .btn-push-primary {
-    @apply btn-push bg-accent text-bone;
+    @apply btn-push bg-accent text-bone dark:text-ink;
   }
 
   .btn-push-ghost {

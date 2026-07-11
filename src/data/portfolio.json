@@ -1,9 +1,9 @@
 {
   "hero": {
-    "eyebrow": "AI & Full-Stack Engineer",
+    "eyebrow": "AI & Software Engineer",
     "headlineStart": "I build AI systems & web products that ship",
     "headlineHighlight": "measurable results.",
-    "subline": "From computer-vision pipelines on edge devices to full-stack platforms in production — I take projects from idea to deployed, working software.",
+    "subline": "From LLM-powered platforms and computer-vision on edge devices to full-stack web and mobile apps — I take projects from idea to deployed, working software.",
     "ctaPrimary": "Start a project",
     "ctaSecondary": "Download CV"
   },
@@ -11,18 +11,18 @@
     "status": "Available for projects",
     "location": "Algiers · GMT+1",
     "response": "< 24h response",
-    "focus": "AI · CV · Full-Stack"
+    "focus": "AI · LLMs · Full-Stack"
   },
   "stats": [
-    { "value": "5x", "label": "faster driver matching shipped for a ride-hailing platform" },
-    { "value": "10+", "label": "products & systems designed, built and delivered" },
-    { "value": "4+", "label": "years of software & AI engineering" },
-    { "value": "<24h", "label": "typical reply time on new inquiries" }
+    { "value": "2026", "label": "Engineering degree in AI & Data Science from ENSIA" },
+    { "value": "4+", "label": "years designing, building and shipping software" },
+    { "value": "3", "label": "countries worked across — Algeria, UAE and Qatar" },
+    { "value": "2", "label": "products founded and launched end-to-end" }
   ],
   "about": {
     "name": "Salah Eddine Makdour",
-    "title": "Software Engineer & AI Specialist",
-    "bio": "I'm a software engineer trained at the National Higher School of Artificial Intelligence (ENSIA) with expertise in full-stack web development, mobile development, and AI solutions. I specialize in building applications that solve real-world problems — and shipping them all the way to production.",
+    "title": "AI & Software Engineer",
+    "bio": "I'm an AI and software engineer and a graduate of the National School of Artificial Intelligence (ENSIA), holding an Engineering degree in Artificial Intelligence and Data Science. I build full-stack web and mobile products, LLM-powered platforms, and computer-vision systems on edge devices — and ship them all the way to production.",
     "image": "/profile.png",
     "resume": "/resume.pdf",
     "social": {
@@ -34,63 +34,95 @@
   "skills": [
     {
       "category": "Programming Languages",
-      "items": ["C++", "Python", "JavaScript/TypeScript", "Dart", "Java", "PHP"]
+      "items": ["Python", "C++", "TypeScript", "JavaScript", "Dart", "Java", "HTML/CSS"]
     },
     {
       "category": "Frameworks & Libraries",
-      "items": ["React", "Next.js", "Flutter", "Express.js", "Spring Boot", "Node.js", "TensorFlow", "PyTorch"]
+      "items": ["React", "Next.js", "Node.js", "Express.js", "NestJS", "FastAPI", "Django", "Flutter", "TensorFlow", "PyTorch", "LangChain"]
     },
     {
-      "category": "Tools & Technologies",
-      "items": ["Git", "Docker", "Linux", "SQL", "NoSQL", "REST APIs", "Electronics"]
+      "category": "Tools & Platforms",
+      "items": ["Linux", "Git", "Docker", "NVIDIA Jetson", "Odoo", "REST APIs", "PostgreSQL"]
     },
     {
-      "category": "Areas of Expertise",
-      "items": ["Full-Stack Web Development", "Cross-Platform Mobile Development", "Computer Vision", "AI & Machine Learning", "Edge Computing", "Large Language Models"]
+      "category": "Fields & Expertise",
+      "items": ["Machine Learning", "Deep Learning", "Computer Vision", "LLMs", "Agentic AI", "Data Mining", "Full-Stack Web & Mobile", "Software Engineering"]
     }
   ],
   "experience": [
     {
-      "title": "Software Engineer",
-      "company": "Optimus LPE",
-      "location": "Remote",
-      "startDate": "June 2024",
-      "endDate": "September 2024",
-      "description": "Worked on advanced loss prevention engineering software solutions. Developed and optimized applications to improve security measures and reduce inventory shrinkage for retail businesses."
-    },
-    {
-      "title": "Software Engineering & AI Intern",
-      "company": "SARL Basseer Innovation & Technology",
+      "title": "Software Engineer (Part-time)",
+      "company": "Dusens Research (Dusens Group)",
       "location": "Algeria",
-      "startDate": "June 2023",
-      "endDate": "September 2023",
-      "description": "Built AI and Computer Vision solutions on edge devices using Python."
+      "startDate": "October 2025",
+      "endDate": "Present",
+      "description": "Part of a newly established AI department transitioning the company's workflow toward AI capabilities. Architecting and building advanced internal tools, and designing project architectures for AI pipeline integration — including model deployment and data-processing workflows."
     },
     {
-      "title": "Software Engineering & AI Intern",
+      "title": "AI Research Intern",
+      "company": "University of Doha for Science and Technology (UDST)",
+      "location": "Qatar",
+      "startDate": "February 2026",
+      "endDate": "July 2026",
+      "description": "Finalized my final-year research project and contributed to several faculty projects across AI and software engineering."
+    },
+    {
+      "title": "Backend Software Engineer (Part-time)",
+      "company": "Spinet NFC",
+      "location": "Algeria",
+      "startDate": "October 2025",
+      "endDate": "January 2026",
+      "description": "Built backend services for a CRM application with NestJS in a microservice architecture, contributing to scalable, maintainable API design and implementation."
+    },
+    {
+      "title": "Edge AI Intern",
       "company": "SARL Basseer Innovation & Technology",
       "location": "Algeria",
       "startDate": "July 2024",
       "endDate": "September 2024",
-      "description": "Built AI and Computer Vision solutions on edge devices using Python."
+      "description": "Built an edge AI system for real-time face identification on NVIDIA Jetson — evaluating SSD, MTCNN, SCRFD and YOLO detectors, ArcFace for feature embedding, and DeepSORT for tracking, with MQTT for backend communication."
     },
     {
-      "title": "Co-Founder & Ex-President",
-      "company": "ENSIA Tech Community (ETC)",
+      "title": "Software Engineering Freelancer",
+      "company": "Optimus LPE",
+      "location": "Remote",
+      "startDate": "June 2024",
+      "endDate": "September 2024",
+      "description": "Contributed to an ATEX equipment-inspection management platform as a freelancer — developing and optimizing features to streamline safety workflows, strengthen loss prevention, and ensure regulatory compliance for equipment in hazardous environments."
+    },
+    {
+      "title": "AI Research Intern",
+      "company": "NYU Abu Dhabi (NYUAD)",
+      "location": "UAE",
+      "startDate": "July 2024",
+      "endDate": "September 2024",
+      "description": "Contributed to \"Using Deep Reinforcement Learning for Automatic Code Optimization in the Tiramisu Compiler\" — getting into RL and compiler fundamentals and simplifying the Tiramisu compiler's build process."
+    },
+    {
+      "title": "Edge AI Intern",
+      "company": "SARL Basseer Innovation & Technology",
       "location": "Algeria",
-      "startDate": "2022",
-      "endDate": "2024",
-      "description": "Founded and led the technical community at ENSIA. Mentored workshops in AI, software development, and electronics."
+      "startDate": "July 2023",
+      "endDate": "September 2023",
+      "description": "Built an edge AI system for fire detection using a trained YOLOv8 model for real-time video analysis, deployed on NVIDIA Jetson for on-site processing, with the lightweight MQTT protocol transmitting instant low-bandwidth alerts on fire or smoke."
+    },
+    {
+      "title": "Founder & Ex-President",
+      "company": "ENSIA Tech Community",
+      "location": "Algeria",
+      "startDate": "March 2022",
+      "endDate": "June 2024",
+      "description": "Founded and led one of the first scientific clubs at ENSIA. Mentored workshops in AI, software development and electronics, organized many technical events, and led community projects such as ENSIA Hub."
     }
   ],
   "education": [
     {
-      "degree": "Artificial Intelligence (4th Year)",
-      "institution": "The National Higher School of Artificial Intelligence (ENSIA)",
+      "degree": "Engineering Degree — Artificial Intelligence & Data Science",
+      "institution": "National School of Artificial Intelligence (ENSIA)",
       "location": "Algeria",
-      "startDate": "2020",
-      "endDate": "Present",
-      "description": "Specializing in artificial intelligence and software engineering."
+      "startDate": "2021",
+      "endDate": "2026",
+      "description": "Graduated with an Engineering degree specializing in Artificial Intelligence and Data Science, with a strong software-engineering foundation. Final-year project: a spoof-verification framework for ADAS traffic-sign perception, with a manuscript authored for IEEE Transactions on Intelligent Transportation Systems."
     },
     {
       "degree": "BAC in Mathematics",
@@ -98,10 +130,22 @@
       "location": "Tissemsilt, Algeria",
       "startDate": "2017",
       "endDate": "2020",
-      "description": "Graduated with an average of 17.95 in Mathematics stream."
+      "description": "Graduated with an average of 17.95 in the Mathematics stream."
     }
   ],
   "projects": [
+    {
+      "title": "Syllabri — AI Learning Platform",
+      "featured": true,
+      "role": "Founder & Software Engineer",
+      "year": "2025",
+      "outcome": "Built an AI study platform from concept to MVP, solo",
+      "metrics": ["Async PDF ingestion pipeline with OCR & automated topic extraction", "Topic-scoped LLM chat, explanations & dynamic quiz generation", "FastAPI backend with a responsive React frontend"],
+      "description": "A full-stack AI educational platform that structures student learning from uploaded course materials and makes it interactive using LLMs — turning raw PDFs into topic-scoped AI chat, dynamic quizzes and on-demand explanations.",
+      "technologies": ["Python", "FastAPI", "React", "LLMs", "OCR", "Async Pipelines"],
+      "image": "/projects/syllabri.png",
+      "demo": "https://syllabri.vercel.app/"
+    },
     {
       "title": "AI-Based Driver Assignment Optimization",
       "featured": true,
@@ -109,69 +153,78 @@
       "year": "2023",
       "outcome": "Cut rider wait times by up to 5x",
       "metrics": ["5x faster driver–rider matching", "86K+ trip records analyzed", "Lower cancellation rates"],
-      "description": "Developed an AI model to optimize driver-rider matching for a ride-hailing platform by analyzing driver behavior and trip data. Built with Python and TensorFlow on a dataset of 86K+ records to enhance assignment efficiency and user satisfaction.",
-      "technologies": ["Python", "TensorFlow", "Machine Learning", "Data Analysis"],
+      "description": "An AI model that optimizes driver–rider matching for a ride-hailing platform by analyzing driver behavior and trip data. Built with Python and TensorFlow on a dataset of 86K+ records to improve assignment efficiency and user satisfaction.",
+      "technologies": ["Python", "TensorFlow", "Predictive Modeling", "Optimization"],
       "image": "/projects/yassir.png"
     },
     {
-      "title": "Forest Fire Detection and Monitoring System",
+      "title": "Forest Fire Detection System",
       "featured": true,
-      "role": "Computer Vision Engineer",
+      "role": "Edge AI Engineer",
       "year": "2023",
       "outcome": "Real-time fire detection running autonomously on the edge",
-      "metrics": ["Real-time video-stream analysis", "Deployed on NVIDIA Jetson", "Operates offline in remote areas"],
-      "description": "An intelligent system for early detection and real-time monitoring of forest fires. Processes video streams from strategic camera placements to identify fire patterns and smoke signatures, alerting authorities immediately. Optimized for edge deployment on NVIDIA Jetson devices for autonomous operation in remote areas with limited connectivity.",
-      "technologies": ["Python", "OpenCV", "MQTT", "NVIDIA Jetson", "YOLO", "Edge Computing"],
+      "metrics": ["YOLOv8 real-time video analysis", "Deployed on NVIDIA Jetson for on-site processing", "Instant low-bandwidth MQTT alerts"],
+      "description": "An edge AI system for early fire detection built with a trained YOLOv8 model for real-time video analysis. Deployed on NVIDIA Jetson for on-site processing, it uses the lightweight MQTT protocol to transmit instant alerts the moment fire or smoke is detected.",
+      "technologies": ["Python", "YOLOv8", "OpenCV", "NVIDIA Jetson", "MQTT", "Edge Computing"],
       "image": "/projects/forest.png"
     },
     {
-      "title": "Equipment Inspections Platform",
+      "title": "ATEX Equipment Inspections Platform",
       "featured": true,
-      "role": "Full-Stack Developer",
+      "role": "Software Engineer (Freelance · Optimus LPE)",
       "year": "2024",
-      "outcome": "Replaced paperwork with a digital inspection pipeline",
-      "metrics": ["Digital forms & automated PDF reports", "Client dashboards & scheduling", "In production for industrial safety"],
-      "description": "A web-based platform that streamlines the equipment inspection process for industrial safety companies: digital inspection forms, automated reporting, client dashboards, and maintenance scheduling with notifications. Reduced paperwork, improved inspection accuracy, and enhanced client communication in safety-critical environments.",
+      "outcome": "Streamlined safety-critical inspection workflows for hazardous environments",
+      "metrics": ["Digital inspection forms & automated reporting", "Loss-prevention & ATEX compliance features", "Built for equipment in hazardous environments"],
+      "description": "An ATEX equipment-inspection management platform for industrial safety. Developed and optimized features that streamline critical safety workflows, strengthen loss prevention, and ensure regulatory compliance for equipment used in hazardous environments.",
       "technologies": ["React", "Node.js", "PostgreSQL", "REST API", "PDF Generation"],
       "image": "/projects/atex.png"
     },
     {
       "title": "Notiverse App",
       "featured": true,
-      "role": "Founder & Developer",
+      "role": "Founder & Software Engineer",
       "year": "2024",
-      "outcome": "A live product built and shipped end-to-end, solo",
-      "metrics": ["Founder, designer & developer", "Cross-platform with Flutter", "Live at notiverse.app"],
-      "description": "A mobile application that lets users organize their notes seamlessly. Designed, built, and launched the entire product single-handedly — from concept and UX to release.",
-      "technologies": ["Flutter", "Dart", "Mobile Development"],
+      "outcome": "A live, offline-first notes app shipped solo",
+      "metrics": ["Flutter with Clean Architecture & Riverpod", "Offline-first, with text and image notes", "Live at notiverse.app"],
+      "description": "A smart notes-taking and organization mobile app. Built with Flutter following Clean Architecture and using Riverpod for state management, designed offline-first with support for both text and image notes.",
+      "technologies": ["Flutter", "Dart", "Riverpod", "Clean Architecture", "Offline-First"],
       "image": "/projects/notiverse.png",
-      "demo": "https://notiverse.app/"
+      "demo": "https://www.notiverse.app/"
     },
     {
-      "title": "Face Detection and Identification System",
-      "role": "Computer Vision Engineer",
+      "title": "ADAS Traffic-Sign Spoof Verification",
+      "role": "AI Researcher — Final-Year Project",
+      "year": "2026",
+      "outcome": "IEEE ITS manuscript · 0.71 mean AUROC",
+      "description": "A modular, multi-sensor framework that flags spoofed and contextually implausible traffic signs in ADAS perception, fusing contextual, physical (camera–LiDAR) and pixel-level branches through a reliability-aware late-fusion layer. Built the contextual branch (104 association-rule-mining rules + calibrated logistic regression on BDD100K) and released a public BDD100K annotation extension of 16,515 VLM-labeled sign crops.",
+      "technologies": ["PyTorch", "Computer Vision", "Sensor Fusion", "LiDAR", "Association Rule Mining"],
+      "image": "/projects/adas.png"
+    },
+    {
+      "title": "Face Detection & Identification System",
+      "role": "Edge AI Engineer",
       "year": "2024",
-      "description": "Real-time facial recognition system for access control and security, running on edge devices for privacy-preserving processing and minimal latency — accurate even in challenging lighting conditions.",
-      "technologies": ["Python", "OpenCV", "NVIDIA Jetson", "Face Recognition", "Edge AI"],
+      "description": "Real-time face identification on NVIDIA Jetson for access control and security. Evaluated SSD, MTCNN, SCRFD and YOLO detectors, used ArcFace for accurate feature embedding and DeepSORT for robust tracking, with MQTT for efficient backend communication.",
+      "technologies": ["Computer Vision", "ArcFace", "DeepSORT", "NVIDIA Jetson", "Edge AI"],
       "image": "/projects/face-recognition.png"
-    },
-    {
-      "title": "SatisUniv",
-      "role": "Full-Stack Developer",
-      "year": "2023",
-      "description": "A platform designed to improve school stakeholder satisfaction through better communication and feedback systems.",
-      "technologies": ["TypeScript", "React", "Node.js"],
-      "image": "/projects/satisuniv.png"
     },
     {
       "title": "CourseSeeker",
       "role": "Backend Developer",
       "year": "2023",
-      "description": "Backend for an online directory of private schools — TypeScript, Express.js, and PostgreSQL, with fully documented REST APIs.",
+      "description": "Backend for an online directory of private schools — TypeScript, Express.js and PostgreSQL, with fully documented REST APIs.",
       "technologies": ["TypeScript", "Express.js", "PostgreSQL"],
       "image": "/projects/course-seeker.png",
       "github": "https://github.com/Online-directory-for-Private-Schools/backend",
       "demo": "https://course-seeker-api-docs.vercel.app/"
+    },
+    {
+      "title": "SatisUniv",
+      "role": "Full-Stack Developer",
+      "year": "2023",
+      "description": "A platform designed to improve school-stakeholder satisfaction through better communication and feedback systems.",
+      "technologies": ["TypeScript", "React", "Node.js"],
+      "image": "/projects/satisuniv.png"
     },
     {
       "title": "ENSIA Hub Library Website",

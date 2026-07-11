@@ -15,7 +15,7 @@ const SectionTitle = ({ index, label, title }: SectionTitleProps) => {
       transition={{ duration: 0.3 }}
       viewport={{ once: true }}
     >
-      <div className="label-mono flex items-center gap-3 text-stamp mb-4">
+      <div className="label-mono flex items-center gap-3 text-meta mb-4">
         <span className="inline-block h-2 w-2 bg-accent" aria-hidden="true"></span>
         <span>
           [ {index} / {label} ]
