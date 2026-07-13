@@ -27,7 +27,7 @@ const Experience = () => {
               className="grid gap-3 p-5 md:grid-cols-[220px_1fr_140px] md:gap-6 md:p-6"
             >
               <div className="label-mono text-meta">
-                {job.startDate} — {job.endDate}
+                {job.startDate} - {job.endDate}
               </div>
               <div>
                 <h3 className="font-display text-lg font-bold uppercase leading-tight">
@@ -59,7 +59,7 @@ const Experience = () => {
               {education.map((edu) => (
                 <div key={edu.degree} className="panel p-5">
                   <div className="label-mono flex justify-between text-meta">
-                    <span>{edu.startDate} — {edu.endDate}</span>
+                    <span>{edu.startDate} - {edu.endDate}</span>
                     <span>{edu.location}</span>
                   </div>
                   <h3 className="font-display mt-3 text-lg font-bold uppercase leading-tight">{edu.degree}</h3>

@@ -17,7 +17,7 @@ const Hero = () => {
         >
           <p className="label-mono mb-10 flex items-center gap-3 text-meta">
             <span className="inline-block h-2 w-2 bg-accent" aria-hidden="true"></span>
-            {hero.eyebrow} — Est. 2020
+            {hero.eyebrow} · Est. 2020
           </p>
 
           <h1 className="font-display max-w-4xl text-5xl font-bold uppercase leading-[0.95] tracking-tight md:text-7xl">
@@ -79,7 +79,7 @@ const Hero = () => {
       {/* Static stack strip */}
       <div className="border-t-2 border-ink bg-ink py-3 text-bone dark:border-bone dark:bg-bone dark:text-ink">
         <p className="label-mono mx-auto max-w-6xl overflow-hidden text-ellipsis whitespace-nowrap px-4 text-center md:px-6">
-          <span className="text-bone/50 dark:text-ink/50">Core stack — </span>
+          <span className="text-bone/50 dark:text-ink/50">Core stack: </span>
           {CORE_STACK.join('  ·  ')}
         </p>
       </div>

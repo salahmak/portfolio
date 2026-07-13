@@ -20,7 +20,7 @@ const Contact = () => {
           <div className="grid md:grid-cols-[1fr_320px]">
             <div className="p-6 md:p-10">
               <p className="max-w-xl text-lg leading-relaxed text-ink/80 dark:text-bone/80">
-                Tell me what you're building and where it hurts — I'll reply with an honest
+                Tell me what you're building and where it hurts. I'll reply with an honest
                 assessment of how I can help, usually within a day. No forms, no gatekeeping:
                 one email starts the conversation.
               </p>

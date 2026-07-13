@@ -27,7 +27,7 @@ const Projects = () => {
               viewport={{ once: true, margin: '-80px' }}
               className="grid items-stretch gap-8 md:grid-cols-2"
             >
-              {/* Image panel — alternate sides on desktop */}
+              {/* Image panel - alternate sides on desktop */}
               <div className={`panel overflow-hidden shadow-hard dark:shadow-hard-bone ${index % 2 === 1 ? 'md:order-2' : ''}`}>
                 <div className="flex items-center justify-between border-b-2 border-ink px-4 py-2 dark:border-bone">
                   <span className="label-mono">[CASE-{String(index + 1).padStart(2, '0')}]</span>

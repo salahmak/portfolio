@@ -3,7 +3,7 @@
     "eyebrow": "AI & Software Engineer",
     "headlineStart": "I build AI systems & web products that ship",
     "headlineHighlight": "measurable results.",
-    "subline": "From LLM-powered platforms and computer-vision on edge devices to full-stack web and mobile apps — I take projects from idea to deployed, working software.",
+    "subline": "From LLM-powered platforms and computer-vision on edge devices to full-stack web and mobile apps. I take projects from idea to deployed, working software.",
     "ctaPrimary": "Start a project",
     "ctaSecondary": "Download CV"
   },
@@ -16,13 +16,13 @@
   "stats": [
     { "value": "2026", "label": "Engineering degree in AI & Data Science from ENSIA" },
     { "value": "4+", "label": "years designing, building and shipping software" },
-    { "value": "3", "label": "countries worked across — Algeria, UAE and Qatar" },
+    { "value": "3", "label": "countries worked across: Algeria, UAE and Qatar" },
     { "value": "2", "label": "products founded and launched end-to-end" }
   ],
   "about": {
     "name": "Salah Eddine Makdour",
     "title": "AI & Software Engineer",
-    "bio": "I'm an AI and software engineer and a graduate of the National School of Artificial Intelligence (ENSIA), holding an Engineering degree in Artificial Intelligence and Data Science. I build full-stack web and mobile products, LLM-powered platforms, and computer-vision systems on edge devices — and ship them all the way to production.",
+    "bio": "I'm an AI and software engineer and a graduate of the National School of Artificial Intelligence (ENSIA), holding an Engineering degree in Artificial Intelligence and Data Science. I build full-stack web and mobile products, LLM-powered platforms, and computer-vision systems on edge devices, and ship them all the way to production.",
     "image": "/profile.png",
     "resume": "/resume.pdf",
     "social": {
@@ -56,7 +56,7 @@
       "location": "Algeria",
       "startDate": "October 2025",
       "endDate": "Present",
-      "description": "Part of a newly established AI department transitioning the company's workflow toward AI capabilities. Architecting and building advanced internal tools, and designing project architectures for AI pipeline integration — including model deployment and data-processing workflows."
+      "description": "Part of a newly established AI department transitioning the company's workflow toward AI capabilities. Architecting and building advanced internal tools, and designing project architectures for AI pipeline integration, including model deployment and data-processing workflows."
     },
     {
       "title": "AI Research Intern",
@@ -80,7 +80,7 @@
       "location": "Algeria",
       "startDate": "July 2024",
       "endDate": "September 2024",
-      "description": "Built an edge AI system for real-time face identification on NVIDIA Jetson — evaluating SSD, MTCNN, SCRFD and YOLO detectors, ArcFace for feature embedding, and DeepSORT for tracking, with MQTT for backend communication."
+      "description": "Built an edge AI system for real-time face identification on NVIDIA Jetson, evaluating SSD, MTCNN, SCRFD and YOLO detectors, ArcFace for feature embedding, and DeepSORT for tracking, with MQTT for backend communication."
     },
     {
       "title": "Software Engineering Freelancer",
@@ -88,7 +88,7 @@
       "location": "Remote",
       "startDate": "June 2024",
       "endDate": "September 2024",
-      "description": "Contributed to an ATEX equipment-inspection management platform as a freelancer — developing and optimizing features to streamline safety workflows, strengthen loss prevention, and ensure regulatory compliance for equipment in hazardous environments."
+      "description": "Contributed to an ATEX equipment-inspection management platform as a freelancer, developing and optimizing features to streamline safety workflows, strengthen loss prevention, and ensure regulatory compliance for equipment in hazardous environments."
     },
     {
       "title": "AI Research Intern",
@@ -96,7 +96,7 @@
       "location": "UAE",
       "startDate": "July 2024",
       "endDate": "September 2024",
-      "description": "Contributed to \"Using Deep Reinforcement Learning for Automatic Code Optimization in the Tiramisu Compiler\" — getting into RL and compiler fundamentals and simplifying the Tiramisu compiler's build process."
+      "description": "Contributed to \"Using Deep Reinforcement Learning for Automatic Code Optimization in the Tiramisu Compiler\", getting into RL and compiler fundamentals and simplifying the Tiramisu compiler's build process."
     },
     {
       "title": "Edge AI Intern",
@@ -117,7 +117,7 @@
   ],
   "education": [
     {
-      "degree": "Engineering Degree — Artificial Intelligence & Data Science",
+      "degree": "Engineering Degree in Artificial Intelligence & Data Science",
       "institution": "National School of Artificial Intelligence (ENSIA)",
       "location": "Algeria",
       "startDate": "2021",
@@ -135,14 +135,14 @@
   ],
   "projects": [
     {
-      "title": "Syllabri — AI Learning Platform",
+      "title": "Syllabri - AI Learning Platform",
       "category": "PRODUCT",
       "featured": true,
       "role": "Founder & Software Engineer",
       "year": "2025",
       "outcome": "Built an AI study platform from concept to MVP, solo",
       "metrics": ["Async PDF ingestion pipeline with OCR & automated topic extraction", "Topic-scoped LLM chat, explanations & dynamic quiz generation", "FastAPI backend with a responsive React frontend"],
-      "description": "A full-stack AI educational platform that structures student learning from uploaded course materials and makes it interactive using LLMs — turning raw PDFs into topic-scoped AI chat, dynamic quizzes and on-demand explanations.",
+      "description": "A full-stack AI educational platform that structures student learning from uploaded course materials and makes it interactive using LLMs, turning raw PDFs into topic-scoped AI chat, dynamic quizzes and on-demand explanations.",
       "technologies": ["Python", "FastAPI", "React", "LLMs", "OCR", "Async Pipelines"],
       "image": "/projects/syllabri.png",
       "demo": "https://syllabri.vercel.app/"
@@ -154,8 +154,8 @@
       "role": "ML Engineer",
       "year": "2023",
       "outcome": "Cut rider wait times by up to 5x",
-      "metrics": ["5x faster driver–rider matching", "86K+ trip records analyzed", "Lower cancellation rates"],
-      "description": "An AI model that optimizes driver–rider matching for a ride-hailing platform by analyzing driver behavior and trip data. Built with Python and TensorFlow on a dataset of 86K+ records to improve assignment efficiency and user satisfaction.",
+      "metrics": ["5x faster driver-rider matching", "86K+ trip records analyzed", "Lower cancellation rates"],
+      "description": "An AI model that optimizes driver-rider matching for a ride-hailing platform by analyzing driver behavior and trip data. Built with Python and TensorFlow on a dataset of 86K+ records to improve assignment efficiency and user satisfaction.",
       "technologies": ["Python", "TensorFlow", "Predictive Modeling", "Optimization"],
       "image": "/projects/yassir.png"
     },
@@ -199,20 +199,20 @@
     {
       "title": "LLM-Based Clinical Referral Triage Automation",
       "category": "ACADEMIC",
-      "role": "AI Intern — UDST",
+      "role": "AI Intern - UDST",
       "year": "2026",
-      "outcome": "73% ESI acuity accuracy · under-triage cut 5–12pp",
-      "description": "An end-to-end triage pipeline that classifies emergency-department encounters into three ESI acuity levels from MIMIC-IV-ED clinical notes and vitals, behind an 11-step preprocessing stage (vitals parsing, outlier handling, clinical-threshold flagging). Benchmarked 4 open-weight LLMs (dense & MoE, 24–35B, quantized to fit L4 VRAM) across 6 prompting strategies — zero/few-shot, chain-of-thought, role-based and structured output — served locally via vLLM with concurrent inference over ~7,000 predictions. Best result (Gemma-3 + few-shot) reached 73% accuracy with zero parse errors, and a safety-focused evaluation of under-triage drove a 5–12pp reduction via calibration prompting and curated, class-balanced few-shot exemplars.",
+      "outcome": "73% ESI acuity accuracy · under-triage cut 5-12pp",
+      "description": "An end-to-end triage pipeline that classifies emergency-department encounters into three ESI acuity levels from MIMIC-IV-ED clinical notes and vitals, behind an 11-step preprocessing stage (vitals parsing, outlier handling, clinical-threshold flagging). Benchmarked 4 open-weight LLMs (dense & MoE, 24-35B, quantized to fit L4 VRAM) across 6 prompting strategies (zero/few-shot, chain-of-thought, role-based and structured output), served locally via vLLM with concurrent inference over ~7,000 predictions. Best result (Gemma-3 + few-shot) reached 73% accuracy with zero parse errors, and a safety-focused evaluation of under-triage drove a 5-12pp reduction via calibration prompting and curated, class-balanced few-shot exemplars.",
       "technologies": ["Python", "vLLM", "PyTorch", "LLMs", "Prompt Engineering"],
       "image": "/projects/triage.png"
     },
     {
       "title": "ADAS Traffic-Sign Spoof Verification",
       "category": "ACADEMIC",
-      "role": "AI Researcher — Final-Year Project",
+      "role": "AI Researcher - Final-Year Project",
       "year": "2026",
       "outcome": "IEEE ITS manuscript · 0.71 mean AUROC",
-      "description": "A modular, multi-sensor framework that flags spoofed and contextually implausible traffic signs in ADAS perception, fusing contextual, physical (camera–LiDAR) and pixel-level branches through a reliability-aware late-fusion layer. Built the contextual branch (104 association-rule-mining rules + calibrated logistic regression on BDD100K) and released a public, human-verified BDD100K annotation extension of 16,515 VLM-labeled sign crops on IEEE DataPort.",
+      "description": "A modular, multi-sensor framework that flags spoofed and contextually implausible traffic signs in ADAS perception, fusing contextual, physical (camera-LiDAR) and pixel-level branches through a reliability-aware late-fusion layer. Built the contextual branch (104 association-rule-mining rules + calibrated logistic regression on BDD100K) and released a public, human-verified BDD100K annotation extension of 16,515 VLM-labeled sign crops on IEEE DataPort.",
       "technologies": ["PyTorch", "Computer Vision", "Sensor Fusion", "LiDAR", "Association Rule Mining"],
       "image": "/projects/adas.png",
       "dataset": "https://ieee-dataport.org/documents/bdd100k-mutcd-fine-grained-human-verified-traffic-sign-type-annotations-bdd100k-dataset"
@@ -231,7 +231,7 @@
       "category": "ACADEMIC",
       "role": "Backend Developer",
       "year": "2023",
-      "description": "Backend for an online directory of private schools — TypeScript, Express.js and PostgreSQL, with fully documented REST APIs.",
+      "description": "Backend for an online directory of private schools: TypeScript, Express.js and PostgreSQL, with fully documented REST APIs.",
       "technologies": ["TypeScript", "Express.js", "PostgreSQL"],
       "image": "/projects/course-seeker.png",
       "github": "https://github.com/Online-directory-for-Private-Schools/backend",

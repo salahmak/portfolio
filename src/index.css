@@ -49,7 +49,7 @@
 }
 
 @layer components {
-  /* Blueprint grid backdrop — hero only */
+  /* Blueprint grid backdrop - hero only */
   .bg-grid {
     background-image:
       linear-gradient(to right, rgba(17, 17, 16, 0.06) 1px, transparent 1px),
@@ -68,7 +68,7 @@
     @apply font-mono text-xs uppercase tracking-[0.15em];
   }
 
-  /* Metadata gray — meets AA contrast on both themes */
+  /* Metadata gray - meets AA contrast on both themes */
   .text-meta {
     color: #66635e;
   }
@@ -82,7 +82,7 @@
     @apply inline-block shrink-0 bg-ink px-2 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-bone dark:bg-bone dark:text-ink;
   }
 
-  /* Bordered panel — the core brutalist surface */
+  /* Bordered panel - the core brutalist surface */
   .panel {
     @apply border-2 border-ink bg-bone dark:border-bone dark:bg-ink;
   }
